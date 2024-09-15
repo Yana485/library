@@ -54,7 +54,7 @@ img {
 }
 
 .page-header {
-    background-color: #FFF;
+    background-color: #083a3b;
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -62,7 +62,15 @@ img {
 }
 
 .header-container {
-    display: flex;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    justify-content: start;
+    align-items: center;
+    margin-right: 100px;
 }
 
 .top-nav {
@@ -70,3 +78,94 @@ img {
     align-items: center;
 }
 
+.banner {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    /* background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/banner/hero_img.jpg); */
+    background-image: url(https://picsum.photos/1440/600);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+}
+
+.page-title {
+    /*Заголовок на банері зверху*/
+    color: #FFF;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    /* 107.143% */
+    letter-spacing: 0.02em;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.menu-item {
+    /*меню навігації*/
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.menu-link {
+    color: #bcbcbc;
+    display: block;
+    padding: 24px 0;
+}
+
+.menu-link:hover {
+    color: #e9c873;
+}
+
+.link {
+    /*для всіх лінків*/
+    text-decoration: none;
+}
+
+/* DROPDOWN */
+
+.dropdown-content {
+    opacity: 0;
+    /* Початкова прозорість */
+    visibility: hidden;
+    /* Початкова невидимість */
+    position: absolute;
+    background-color: #083a3b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Плавний перехід */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #5757e7;
+}
+
+.menu-item:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
