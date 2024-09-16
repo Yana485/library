@@ -70,12 +70,14 @@ img {
 .logo {
     justify-content: start;
     align-items: center;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 
 .top-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 1158px;
 }
 
 .banner {
@@ -106,10 +108,13 @@ img {
     letter-spacing: 0.02em;
 }
 
+.list{
+    list-style-type: none;
+}
+
 .menu {
     display: flex;
     gap: 20px;
-    list-style-type: none;
 }
 
 .menu-item {
@@ -140,9 +145,7 @@ img {
 
 .dropdown-content {
     opacity: 0;
-    /* Початкова прозорість */
     visibility: hidden;
-    /* Початкова невидимість */
     position: absolute;
     background-color: #083a3b;
     min-width: 160px;
@@ -151,18 +154,19 @@ img {
     top: 100%;
     left: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    /* Плавний перехід */
 }
 
 .dropdown-content a {
-    color: white;
+    color: #bcbcbc;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    width: 300px;
 }
 
 .dropdown-content a:hover {
-    background-color: #5757e7;
+    color: #e9c873;
+    background-color: #0a4546;
 }
 
 .menu-item:hover .dropdown-content {
