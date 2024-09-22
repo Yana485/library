@@ -40,6 +40,34 @@ img {
     justify-content: space-between;
 }
 
+.section-name{
+    color: #08203b;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.07;
+    /* 107.143% */
+    letter-spacing: 0.02em;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .page-header {
     background-color: #083a3b;
     border-bottom: 1px solid #E7E9FC;
@@ -99,7 +127,7 @@ img {
     letter-spacing: 0.02em;
 }
 
-.menu, .contact-list{
+.menu, .contact-list, .address-list{
     display: flex;
     gap: 20px;
 }
@@ -146,7 +174,7 @@ img {
 }
 
 .news-img{
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -306,8 +334,53 @@ img {
         opacity: 1
     }
 }
+/* Наші експозиції */
+.expos-list {
+    display: flex;
+    column-gap: 15px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
 
+.expos-list-item {
+    /* background-color: #eeeeee; */
+    width: 360px;
+    width: calc((100%-30px)/3);
+    max-height: 400px;
+    overflow: hidden;
+}
 
+.expos-img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    object-fit: cover;
+}
+
+/* GALLERY */
+.gallery-list {
+    display: flex;
+    column-gap: 15px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-list-item {
+    /* background-color: #eeeeee; */
+    width: 360px;
+    width: calc((100%-30px)/3);
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.gallery-img{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    object-fit: cover;
+}
 
 /* FOOTER */
 .bottom-part{
@@ -350,18 +423,15 @@ img {
     flex-direction: column;
     column-gap: 20px;
 }
+
 .contact-look {
     color: #bcbcbc;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-look:hover {
+.contact-look:hover, .contact-look:focus {
     color: #e9c873;
 }
-
-.contact-look:focus {
-    color: #e9c873;
-} 
 
 .footer-media-list {
     display: flex;
@@ -420,3 +490,8 @@ img {
 /* .history-text{
     color: #242424;
 } */
+
+/* CONTACTS TAB */
+.contacts-address, .contacts-phone{
+    margin-right: 100px;
+}
