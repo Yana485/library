@@ -492,6 +492,17 @@ img {
 } */
 
 /* CONTACTS TAB */
-.contacts-address, .contacts-phone{
-    margin-right: 100px;
+.contacts-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 100px;
+    flex-wrap: nowrap;
+}
+.contacts-address, .contacts-phone, .contacts-media{
+    background-color: #e9c873;
+}
+.address-name {
+    color: #08203b;
+    margin-bottom: 16px;
 }
