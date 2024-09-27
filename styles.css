@@ -4,7 +4,7 @@ body {
     background-color: #FFF;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
 }
 
 h1,
@@ -71,9 +71,9 @@ img {
 .page-header {
     background-color: #083a3b;
     border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+        0 1px 1px rgba(46, 47, 66, 0.16),
+        0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -168,7 +168,7 @@ img {
     background-color:#eeeeee;
     border: 1px solid #083a3b;
     border-radius: 15px;
-    width: calc((100%-30px)/3);
+    width: calc((100% - 30px) / 3);
     height: 400px;
     overflow: hidden;
 }
@@ -343,9 +343,8 @@ img {
 }
 
 .expos-list-item {
-    /* background-color: #eeeeee; */
-    width: 360px;
-    width: calc((100%-30px)/3);
+    /* width: 360px; */
+    width: calc((100% - 30px) / 3);
     max-height: 400px;
     overflow: hidden;
 }
@@ -367,18 +366,13 @@ img {
 }
 
 .gallery-list-item {
-    /* background-color: #eeeeee; */
     width: 360px;
-    width: calc((100%-30px)/3);
     max-height: 400px;
     overflow: hidden;
 }
 
 .gallery-img{
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
     object-fit: cover;
 }
 
