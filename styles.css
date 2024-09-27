@@ -205,7 +205,7 @@ img {
     position: absolute;
     background-color: #083a3b;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 100%;
     left: 0;
@@ -378,7 +378,7 @@ img {
 
 /* FOOTER */
 .bottom-part{
-    padding: 100px 0px;
+    padding: 100px 0;
 }
 
 .bottom-part-content {
