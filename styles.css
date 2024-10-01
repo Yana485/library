@@ -108,6 +108,43 @@ img {
     background-size: cover;
 }
 
+.title-banner{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(rgba(253, 255, 209, 0.7), rgba(64, 105, 70, 0.693)), url(../images/banner/hero_img.jpg);
+    /* background-image: url(https://picsum.photos/1440/600); */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* max-width: 1440px; */
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+}
+
+.prettybox{
+    background-image: linear-gradient(rgba(240, 240, 225, 0.7), rgba(64, 105, 70, 0.693)), url(../images/banner/hero_img.jpg);
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 48px;
+    max-width: 500px;
+    border: 5px solid #083a3b;
+    border-radius: 25px;
+}
+
+.header-title{
+    color: #083a3b;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    /* 107.143% */
+    letter-spacing: 0.02em;
+}
+
 .section {
     padding-top: 100px;
     padding-bottom: 120px;
@@ -123,6 +160,20 @@ img {
     text-align: center;
     font-size: 56px;
     font-weight: 700;
+    line-height: 1.07;
+    /* 107.143% */
+    letter-spacing: 0.02em;
+}
+
+.page-title-description{
+    color: #FFF;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 48px; */
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
     line-height: 1.07;
     /* 107.143% */
     letter-spacing: 0.02em;
@@ -269,7 +320,7 @@ img {
     margin-top: -22px;
     padding: 16px;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
@@ -384,7 +435,7 @@ img {
 }
 
 .fat-text{
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* FOOTER */
