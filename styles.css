@@ -459,12 +459,17 @@ img {
 }
 .footer-address-name{
     color: #cbcbcb;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .footer-address-text{
     width: 400px;
     color: #bcbcbc;
+    margin-bottom: 10px;
+}
+
+.open-times{
+    width: 160px;
 }
 
 .footer-contacts{
@@ -488,6 +493,13 @@ img {
 
 .contact-look:hover, .contact-look:focus {
     color: #e9c873;
+}
+.find-title{
+    margin-bottom: 20px;
+}
+
+.find-text{
+    margin-bottom: 20px;
 }
 
 .footer-media-list {
@@ -538,15 +550,22 @@ img {
     fill: #083a3b;
 }
 
+.license{
+    display: flex;
+    align-items: center;
+}
+
 .ownership {
     color: #bcbcbc;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* HISTORY TAB */
 
-/* .history-text{
-    color: #242424;
-} */
+.history-text{
+    margin-bottom: 20px;
+}
 
 /* CONTACTS TAB */
 .contacts-box{
@@ -610,17 +629,6 @@ img {
 .address-media-link:focus .address-media-icon {
     fill: #083a3b;
 }
-
-/* #map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-/* } */
-/* 
-.place-picker-container {
-    padding: 20px;
-} */
 
 .map{
     width: 100%;

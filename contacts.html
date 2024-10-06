@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<!--
- @license
- Copyright 2019 Google LLC. All Rights Reserved.
- SPDX-License-Identifier: Apache-2.0
--->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Музей Університету митної справи та фінансів</title>
-    <script
-      type="module"
-      src="https://unpkg.com/@googlemaps/extended-component-library@0.6"
-    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -20,21 +11,6 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <gmpx-api-loader
-      key="AIzaSyDwpCY46dSsXAVv4jY3LTOCHAhBsv3QJsA"
-      solution-channel="GMP_GE_mapsandplacesautocomplete_v1"
-    >
-    </gmpx-api-loader>
-    <gmp-map center="40.749933,-73.98633" zoom="13" map-id="DEMO_MAP_ID">
-      <div
-        slot="control-block-start-inline-start"
-        class="place-picker-container"
-      >
-        <gmpx-place-picker placeholder="Enter an address"></gmpx-place-picker>
-      </div>
-      <gmp-advanced-marker></gmp-advanced-marker>
-    </gmp-map>
-    <script src="./js/map.js" defer></script>
     <header class="page-header" id="main">
       <div class="container header-container">
         <nav class="top-nav">
@@ -56,14 +32,6 @@
             </li>
             <li class="menu-item">
               <a class="menu-link link" href="./gallery.html">Галерея</a>
-            </li>
-            <li class="menu-item dropdown">
-              <a class="menu-link link" href="#">Відвідувачу</a>
-              <div class="dropdown-content">
-                <a class="link" href="https://forms.gle/doPkLZPF6fXRF3sg8"
-                  >Зареєструватися</a
-                >
-              </div>
             </li>
             <li class="menu-item">
               <a class="menu-link link" href="./contacts.html">Контакти</a>
@@ -89,33 +57,30 @@
               <h3 class="address-name">Телефон</h3>
               <ul class="address-list">
                 <li class="address-list-item">
-                  <a class="link address-look" href="tel:+110001111111"
-                    >+11 (000) 111-11-11</a
+                  <a class="link address-look" href="tel:+380567560500"
+                    >+380 (056) 756-05-00</a
                   >
                 </li>
                 <li class="address-list-item">
-                  <a class="link address-look" href="tel:+110001111111"
-                    >+11 (000) 111-11-11</a
+                  <a class="link address-look" href="tel:+380665100135"
+                    >+380 (066) 510-01-35</a
                   >
                 </li>
                 <li class="address-list-item">
-                  <a class="link address-look" href="tel:+110001111111"
-                    >+11 (000) 111-11-11</a
+                  <a class="link address-look" href="tel:+38984510182"
+                    >+380 (098) 451-01-82</a
+                  >
+                </li>
+                <li class="address-list-item">
+                  <a class="link address-look" href="umsf.connect@gmail.com"
+                    >umsf.connect@gmail.com</a
                   >
                 </li>
               </ul>
             </div>
             <div class="contacts-phone">
-              <h3 class="address-name">Електронна пошта</h3>
-              <address class="contacts">
-                <ul class="address-list">
-                  <li class="address-list-item">
-                    <a class="link address-look" href="mail@mail.com">
-                      mail@mail.com</a
-                    >
-                  </li>
-                </ul>
-              </address>
+              <h3 class="address-name">Режим роботи</h3>
+              <p class="open-times">вівторок – п’ятниця з 10:00 до 15:00</p>
             </div>
             <div class="contacts-media">
               <h3 class="address-name">Соціальні мережі</h3>
@@ -131,21 +96,7 @@
                   <li class="address-media-item">
                     <a href="" class="address-media-link link">
                       <svg class="address-media-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="address-media-item">
-                    <a href="" class="address-media-link link">
-                      <svg class="address-media-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="address-media-item">
-                    <a href="" class="address-media-link link">
-                      <svg class="address-media-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -169,51 +120,86 @@
           >
         </div>
       </section>
+      <section class="section">
+        <div class="container">
+          <div class="find">
+            <h2 class="find-title fat-text">Як нас знайти?</h2>
+            <p class="find-text">
+              Музей Університету митної справи та фінансів (УМСФ) знаходиться в
+              центрі міста Дніпро за адресою: вул. Володимира Вернадського, 2/4,
+              Дніпро, Дніпропетровська область, Україна, 49000.
+            </p>
+            <h3 class="find-title">Як доїхати:</h3>
+            <p class="find-text">
+              <span class="fat-text">Громадський транспорт</span>: Ви можете
+              дістатися музею на трамваях або автобусах, що зупиняються на
+              найближчих зупинках — “Площа Героїв Майдану” або “вул. Короленка”.
+              Від зупинок до музею всього декілька хвилин пішки.
+            </p>
+            <p class="find-text">
+              <span class="fat-text">Автомобілем</span>: Для тих, хто подорожує
+              на власному транспорті, вулиця Володимира Вернадського знаходиться
+              неподалік основних магістралей міста. Біля музею є можливість
+              припаркувати автомобіль.
+            </p>
+            <h3 class="find-title">Орієнтири:</h3>
+            <p class="find-text">
+              Музей розташований у навчальному корпусі УМСФ, недалеко від
+              <span class="fat-text">площі Героїв Майдану</span> та
+              <span class="fat-text">Центрального парку ім. Лазаря Глоби.</span>
+            </p>
+            <p class="find-text">
+              Чекаємо на вас у нашому музеї, де ви зможете дізнатися більше про
+              історію митної справи та фінансів України!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="bottom-part" id="footer">
       <div class="container">
         <div class="bottom-part-content">
           <div class="footer-address">
-            <h3 class="footer-address-name">АДРЕСА МУЗЕЮ</h3>
-            <p class="footer-address-text">
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Et tincidunt
-              quisque diam semper cursus viverra. Nam nibh proin iaculis; eros
-              mi augue accumsan dui. Placerat nascetur litora cubilia viverra ut
-              donec maecenas. Fringilla vel lacinia leo; imperdiet ultricies
-              quis. Aptent volutpat convallis sit lorem aliquet. Ex ultricies
-              senectus luctus sagittis facilisis. Lorem morbi porta primis
-              laoreet per sit. Donec vel suscipit tristique rutrum orci
-              vehicula. Magna eros hendrerit malesuada; tempus viverra cras.
-              Pellentesque accumsan quisque auctor morbi ligula tempus inceptos
-              elementum tempor.
-            </p>
-          </div>
-          <div class="footer-contacts">
-            <h3 class="footer-address-name">КОНТАКТИ</h3>
+            <h4 class="footer-address-name">
+              Екскурсії для груп (10-25 осіб) проводяться безкоштовно за
+              попереднім записом за телефонами:
+            </h4>
             <address class="contacts">
               <ul class="contact-list">
                 <li class="contact-list-item">
-                  <a class="link contact-look" href="tel:+110001111111"
-                    >+11 (000) 111-11-11</a
+                  <a class="link contact-look" href="tel:+380567560500"
+                    >+380 (056) 756-05-00</a
                   >
                 </li>
                 <li class="contact-list-item">
-                  <a class="link contact-look" href="tel:+110001111111"
-                    >+11 (000) 111-11-11</a
+                  <a class="link contact-look" href="tel:+380665100135"
+                    >+380 (066) 510-01-35</a
                   >
                 </li>
                 <li class="contact-list-item">
-                  <a class="link contact-look" href="tel:+110001111111"
-                    >+11 (000) 111-11-11</a
+                  <a class="link contact-look" href="tel:+38984510182"
+                    >+380 (098) 451-01-82</a
                   >
                 </li>
                 <li class="contact-list-item">
-                  <a class="link contact-look" href="mail@umsf.com"
-                    >mail@umsf.com</a
+                  <a class="link contact-look" href="umsf.connect@gmail.com"
+                    >umsf.connect@gmail.com</a
                   >
                 </li>
               </ul>
             </address>
+          </div>
+
+          <div class="footer-contacts">
+            <h3 class="footer-address-name">РЕЖИМ РОБОТИ</h3>
+            <p class="footer-address-text open-times">
+              вівторок – п’ятниця з 10:00 до 15:00
+            </p>
+            <h3 class="footer-address-name">АДРЕСА МУЗЕЮ</h3>
+            <p class="footer-address-text">
+              вулиця Володимира Вернадського, 2/4, Дніпро, Дніпропетровська
+              область, Україна, 49000
+            </p>
           </div>
           <div class="footer-media">
             <h3 class="footer-address-name">МЕДІА</h3>
@@ -228,75 +214,20 @@
               <li class="social-media-item">
                 <a href="" class="footer-media-link link">
                   <svg class="social-media-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-media-item">
-                <a href="" class="footer-media-link link">
-                  <svg class="social-media-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-media-item">
-                <a href="" class="footer-media-link link">
-                  <svg class="social-media-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <p class="ownership">
-          &#169; 2024 Університет митної справи та фінансів. Всі права захищені
-        </p>
+        <div class="license">
+          <p class="ownership">
+            &#169; 2024 Університет митної справи та фінансів. Всі права
+            захищені
+          </p>
+        </div>
       </div>
     </footer>
-    <!-- <script async>
-      src =
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyDwpCY46dSsXAVv4jY3LTOCHAhBsv3QJsA&loading=async&libraries=places&callback=initMap" >
-        ((g) => {
-          var h,
-            a,
-            k,
-            p = "The Google Maps JavaScript API",
-            c = "google",
-            l = "importLibrary",
-            q = "__ib__",
-            m = document,
-            b = window;
-          b = b[c] || (b[c] = {});
-          var d = b.maps || (b.maps = {}),
-            r = new Set(),
-            e = new URLSearchParams(),
-            u = () =>
-              h ||
-              (h = new Promise(async (f, n) => {
-                await (a = m.createElement("script"));
-                e.set("libraries", [...r] + "");
-                for (k in g)
-                  e.set(
-                    k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
-                    g[k]
-                  );
-                e.set("callback", c + ".maps." + q);
-                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-                d[q] = f;
-                a.onerror = () => (h = n(Error(p + " could not load.")));
-                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-                m.head.append(a);
-              }));
-          d[l]
-            ? console.warn(p + " only loads once. Ignoring:", g)
-            : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
-        })({
-          key: "AIzaSyDwpCY46dSsXAVv4jY3LTOCHAhBsv3QJsA",
-          v: "weekly",
-          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-          // Add other bootstrap parameters as needed, using camel case.
-        });
-    </script> -->
   </body>
 </html>
