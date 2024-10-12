@@ -39,19 +39,19 @@ img {
     padding-right: 15px;
     justify-content: space-between;
 }
-/* не знайшла */
-/* .section-name{
+ 
+.section-name{
     color: #08203b;
-    max-width: 496px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     text-align: center;
     font-size: 32px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
-} */
+}
 
 .visually-hidden {
     position: absolute;
@@ -148,8 +148,28 @@ img {
 }
 
 .section {
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.special{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.news-special{
+    padding-bottom: 10px;
+}
+
+.map-special{
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.find-special{
+padding-top: 80px;
+padding-bottom: 40px;
+
 }
 
 .page-title {
@@ -288,8 +308,13 @@ img {
 }
 
 /* SLIDESHOW */
-* {
+/* * {
     box-sizing: border-box
+} */
+
+.carousel-name{
+    text-align: center;
+    padding-bottom: 40px;
 }
 
 .slide-img{
@@ -392,10 +417,22 @@ img {
     }
 }
 /* Наші експозиції */
-.expos-description{
+.expos-description-top{
+    color: #08203b;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
     margin-bottom: 20px;
 }
 
+.expos-desription{
+    margin-bottom: 20px;
+}
 .expos-list {
     display: flex;
     column-gap: 15px;
