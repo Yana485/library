@@ -8,15 +8,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./old-styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <script src="./js/main.js" defer></script>
+    <script src="./js/phone.js" defer></script>
     <header class="page-header" id="main">
       <div class="container header-container">
+        <!--desktop menu-->
         <nav class="top-nav">
           <a class="logo link" href="./index.html"
-            ><img class="logopic" src="./media/logo_4.png" alt="logo"
+            ><img class="logopic" src="./images/caduceus.png" alt="logo"
           /></a>
           <ul class="menu">
             <li class="menu-item dropdown">
@@ -34,11 +36,59 @@
             <li class="menu-item">
               <a class="menu-link link" href="./gallery.html">Галерея</a>
             </li>
+            <li class="menu-item dropdown">
+              <a class="menu-link link" href="#">Відвідувачу</a>
+              <div class="dropdown-content">
+                <a class="link" href="https://forms.gle/doPkLZPF6fXRF3sg8"
+                  >Зареєструватися</a
+                >
+              </div>
+            </li>
             <li class="menu-item">
               <a class="menu-link link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
+      </div>
+      <!-- PHONE MENU -->
+      <div class="topnav">
+        <a class="active" href="./index.html"
+          ><img class="phone-logopic" src="./images/caduceus.png" alt="logo"
+        /></a>
+        <div id="myLinks" class="phone-menu">
+          <nav class="phone-drop">
+            <ul class="phone-list">
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./index.html">Головна</a>
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./history.html"
+                  >Історія створення музею</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./expositions.html"
+                  >Наші експозиції</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./gallery.html"
+                  >Галерея</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="#">Відвідувачу</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <svg class="phone-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+          <!-- <i class="fa fa-bars"></i> -->
+        </a>
       </div>
     </header>
 
@@ -48,7 +98,6 @@
         <div class="container">
           <div class="prettybox">
             <h1 class="header-title">ІСТОРІЯ МУЗЕЮ</h1>
-          </div>
         </div>
       </section>
       <!-- museum history section -->
@@ -169,17 +218,21 @@
               </ul>
             </address>
           </div>
-          <div class="footer-contacts">
+
+          <div class="footer-times">
             <h3 class="footer-address-name">РЕЖИМ РОБОТИ</h3>
             <p class="footer-address-text open-times">
               вівторок – п’ятниця з 10:00 до 15:00
             </p>
+          </div>
+          <div class="footer-place">
             <h3 class="footer-address-name">АДРЕСА МУЗЕЮ</h3>
             <p class="footer-address-text">
               вулиця Володимира Вернадського, 2/4, Дніпро, Дніпропетровська
               область, Україна, 49000
             </p>
           </div>
+
           <div class="footer-media">
             <h3 class="footer-address-name">МЕДІА</h3>
             <ul class="footer-media-list">
