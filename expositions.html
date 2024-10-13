@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Музей Університету митної справи та фінансів</title>
+    <link rel="icon" type="image/x-icon" href="./images/caduceus.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./old-styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <script src="./js/main.js" defer></script>
+    <script src="./js/phone.js" defer></script>
     <header class="page-header" id="main">
       <div class="container header-container">
+        <!--desktop menu-->
         <nav class="top-nav">
           <a class="logo link" href="./index.html"
-            ><img class="logopic" src="./media/logo_4.png" alt="logo"
+            ><img class="logopic" src="./images/caduceus.png" alt="logo"
           /></a>
           <ul class="menu">
             <li class="menu-item dropdown">
@@ -34,17 +37,65 @@
             <li class="menu-item">
               <a class="menu-link link" href="./gallery.html">Галерея</a>
             </li>
+            <li class="menu-item dropdown">
+              <a class="menu-link link" href="#">Відвідувачу</a>
+              <div class="dropdown-content">
+                <a class="link" href="https://forms.gle/doPkLZPF6fXRF3sg8"
+                  >Зареєструватися</a
+                >
+              </div>
+            </li>
             <li class="menu-item">
               <a class="menu-link link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
       </div>
+      <!-- PHONE MENU -->
+      <div class="topnav">
+        <a class="active" href="./index.html"
+          ><img class="phone-logopic" src="./images/caduceus.png" alt="logo"
+        /></a>
+        <div id="myLinks" class="phone-menu">
+          <nav class="phone-drop">
+            <ul class="phone-list">
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./index.html">Головна</a>
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./history.html"
+                  >Історія створення музею</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./expositions.html"
+                  >Наші експозиції</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./gallery.html"
+                  >Галерея</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="#">Відвідувачу</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <svg class="phone-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+          <!-- <i class="fa fa-bars"></i> -->
+        </a>
+      </div>
     </header>
 
     <main>
       <!-- hero section -->
-      <section class="title-banner" id="banner">
+      <section class="title-banner expos-page" id="banner">
         <div class="container">
           <div class="prettybox">
             <h1 class="header-title">НАШІ ЕКСПОЗИЦІЇ</h1>
@@ -53,144 +104,196 @@
       </section>
 
       <!-- our expositions section -->
-      <section class="section special" id="expositions">
+      <section class="section net" id="expositions">
         <div class="container">
           <h2 class="visually-hidden">Наші експозиції</h2>
 
           <ul class="expos-list">
             <li class="expos-list-item">
-              <img
-                class="expos-img"
-                src="https://picsum.photos/500/300?random=1"
-                alt=""
-              />
+              <div class="expos-box">
+                <div class="expos-top-box">
+                  <a href="#" class="expos-new-link"
+                    ><img
+                      class="expos-img"
+                      src="https://picsum.photos/500/300?random=1"
+                      alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  /></a>
+                  <div class="expos-bottom-box">
+                    <p class="expos-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="expos-list-item">
-              <img
-                class="expos-img"
-                src="https://picsum.photos/500/300/?random=1"
-                alt=""
-              />
+              <div class="expos-box">
+                <div class="expos-top-box">
+                  <a href="#" class="expos-new-link"
+                    ><img
+                      class="expos-img"
+                      src="https://picsum.photos/500/300?random=2"
+                      alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  /></a>
+                  <div class="expos-bottom-box">
+                    <p class="expos-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="expos-list-item">
-              <img
-                class="expos-img"
-                src="https://picsum.photos/500/300?random=1"
-                alt=""
-              />
+              <div class="expos-box">
+                <div class="expos-top-box">
+                  <a href="#" class="expos-new-link"
+                    ><img
+                      class="expos-img"
+                      src="https://picsum.photos/500/300?random=3"
+                      alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  /></a>
+                  <div class="expos-bottom-box">
+                    <p class="expos-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="expos-list-item">
-              <img
-                class="expos-img"
-                src="https://picsum.photos/500/300/?random=1"
-                alt=""
-              />
+              <div class="expos-box">
+                <div class="expos-top-box">
+                  <a href="#" class="expos-new-link"
+                    ><img
+                      class="expos-img"
+                      src="https://picsum.photos/500/300?random=4"
+                      alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  /></a>
+                  <div class="expos-bottom-box">
+                    <p class="expos-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="expos-list-item">
-              <img
-                class="expos-img"
-                src="https://picsum.photos/500/300?random=1"
-                alt=""
-              />
+              <div class="expos-box">
+                <div class="expos-top-box">
+                  <a href="#" class="expos-new-link"
+                    ><img
+                      class="expos-img"
+                      src="https://picsum.photos/500/300?random=5"
+                      alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  /></a>
+                  <div class="expos-bottom-box">
+                    <p class="expos-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="expos-list-item">
-              <img
-                class="expos-img"
-                src="https://picsum.photos/500/300/?random=1"
-                alt=""
-              />
+              <div class="expos-box">
+                <div class="expos-top-box">
+                  <a href="#" class="expos-new-link"
+                    ><img
+                      class="expos-img"
+                      src="https://picsum.photos/500/300?random=6"
+                      alt=""
+                  /></a>
+                  <div class="expos-bottom-box">
+                    <p class="expos-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="section special">
+      <section class="section">
         <div class="container">
-          <div class="expos-text">
+          <div class="expos-description">
             <h2 class="expos-description-top">
-              <span class="fat-text">
-                Експозиції Університету митної справи та фінансів</span
-              >
+              Експозиції Університету митної справи та фінансів
             </h2>
-            <p class="expos-description"></p>
-            <p>
-              Експозиції Університету митної справи та фінансів були створені з
-              2011 по 2023 роки. Експозиції побудовані за тематико-хронологічним
-              принципом. Висвітлюється історія торгівлі та митної справи на
-              території України: боротьби з контрабандою незалежної України,
-              історія митної справи, митних органів, історія УМСФ.
-              Пошуково-експозиційна робота щодо збору та зберігання інформації,
-              документів, фотографій, зразків контрабандної та контрафактної
-              продукції, уніформ митників різних часів і країн світу проводилася
-              працівниками митниць, митних установ та організацій протягом
-              тривалого періоду. Саме завдяки їх плідній роботі й взаємодії з
-              нашим закладом освіти й були створені експозиції.
+            <p class="expos-description">
+              Історія митної справи, митних органів, фінансів та торгівлі на
+              території України з найдавніших часів – перша зала музею
             </p>
             <p class="expos-description">
-              Експозиції, що присвячені історії митної справи та сучасній
-              діяльності митних організацій розміщено у 5-х залах. Вони
-              налічують більше трьох тисяч експонатів, серед яких є унікальні,
-              які розповідають про розвиток торгівельно-митних відносин та
-              митної справи у Північному Причорномор’ї в античні часи, за доби
-              Козаччини та в подальші історичні періоди.
+              "Боротьба з контрабандою в Україні" представлена у другій залі
+              музею.
             </p>
             <p class="expos-description">
-              Важливою частиною експозиції є стенди, що репрезентують роботу
-              українських митників у боротьбі проти незаконного переміщення
-              через митний кордон нашої держави зброї, наркотичних речовин,
-              українських національних святинь, історичних пам’яток українського
-              народу, контрафактної продукції, валюти й виробів із дорогоцінних
-              металів та каменів. У шафах, вітринах та стендах містяться
-              фрагменти оригіналів та макети різноманітних схованок, предметів
-              контрабанди, конфіскованих на митницях України зразків холодної
-              зброї, предметів культури та історії.
+              Третя зала музею Університету присвячена історії митних органів
+              незалежної України та історії створення митниць України.
             </p>
             <p class="expos-description">
-              Окремо, у спеціальній залі, представлена експозиція технічних
-              засобів митного контролю, які використовуються митниками в
-              повсякденній роботі.
+              Четверта зала музею Університету присвячена історії створення й
+              розвитку Академії митної служби України та Університету митної
+              справи та фінансів, висвітлює співпрацю Університету з іноземними
+              партнерами та плідні стосунки з роботодавцями, досягнення наших
+              студентів.
             </p>
             <p class="expos-description">
-              Завдяки широким міжнародним контактам і зв`язкам постійно
-              поповнюється й розширюється експозиція
-              <span class="fat-text">«Уніформи митників країн світу».</span>
+              Експозиція
+              <span class="fat-text">«Історія країн у монетах»</span>
+              представляє монетообіг теперішніх і колишніх держав з усіх
+              континентів
             </p>
             <p class="expos-description">
-              У 2021 році в Університеті митної справи та фінансів були відкриті
-              нові експозиції <span class="fat-text">«Банкноти світу»</span> й
-              <span class="fat-text">«Історія країн у монетах»</span> та
-              <span class="fat-text">«Україна. Валюти»</span>, які висвітлюють
-              історичні етапи й розвиток фінансової системи з найдавніших часів
-              і до сучасності. Експозиція постійно оновлюється. Так у 2023 році
-              було оформлено вітрину з пам’ятним монетами присвяченим Збройним
-              силам України.
+              Експозиція
+              <span class="fat-text">«Україна. Валюта» </span>розкриває
+              фінансові відносини на території України, їх історичні етапи й
+              розвиток грошового обігу на території України з найдавніших часів
+              і до сучасності.
             </p>
             <p class="expos-description">
-              У 2023 році створено нову залу музею, яка присвячена історії
-              створення й розвитку Університету митної справи та фінансів.
+              Унікальна експозиція
+              <span class="fat-text">«Уніформи митників країн світу»</span> –
+              другий та третій поверхи Університету.
             </p>
             <p class="expos-description">
-              Також у 2023 році створено нову експозицію
-              <span class="fat-text">«Петриківський розпис»</span>.
-              Петриківський розпис – релікт безперервної художньої традиції, що
-              делегує з сивої давнини у ХХІ століття самобутню культуру
-              Придніпров’я – колиски запорізького козацтва, його могутній
-              життєстверджуючий демократичний дух, патріотичний пафос та
-              глибочінь епічного народного мислення який включено до переліку
-              об’єктів нематеріальної культурної спадщини людства ЮНЕСКО.
+              Експозиція
+              <span class="fat-text">«Петриківський розпис»</span> представлена
+              у холі на першому поверсі.
             </p>
             <p class="expos-description">
-              З часу заснування експозиції постійно відвідують представники
-              закордонних делегацій, освітянських закладів, працівники митних та
-              правоохоронних структур України.
+              Експозиція
+              <span class="fat-text">«Галерея мистецтв»</span> представлена на
+              третьому поверсі (лабораторний корпус).
             </p>
             <p class="expos-description">
-              <span class="fat-text">Бондаренко Віктор Борисович</span> –
-              директора музею, прикладає зусиль для розширення та оформлення
-              експозицій в єдиний музейний комплекс.
-            </p>
-            <p class="expos-description">
-              У 2023 році музей УМСФ став членом Міжнародної асоціації митних та
-              податкових музеїв.
+              Експозиція <span class="fat-text">«Випускники»</span> представлена
+              на другому поверсі.
             </p>
           </div>
         </div>
@@ -230,17 +333,20 @@
             </address>
           </div>
 
-          <div class="footer-contacts">
+          <div class="footer-times">
             <h3 class="footer-address-name">РЕЖИМ РОБОТИ</h3>
             <p class="footer-address-text open-times">
               вівторок – п’ятниця з 10:00 до 15:00
             </p>
+          </div>
+          <div class="footer-place">
             <h3 class="footer-address-name">АДРЕСА МУЗЕЮ</h3>
             <p class="footer-address-text">
               вулиця Володимира Вернадського, 2/4, Дніпро, Дніпропетровська
               область, Україна, 49000
             </p>
           </div>
+
           <div class="footer-media">
             <h3 class="footer-address-name">МЕДІА</h3>
             <ul class="footer-media-list">
@@ -263,11 +369,15 @@
         </div>
         <div class="license">
           <p class="ownership">
-            &#169; 2024 Університет митної справи та фінансів. Всі права
-            захищені
+            &#169; <span id="year"></span> Університет митної справи та
+            фінансів. Всі права захищені.
           </p>
         </div>
       </div>
     </footer>
   </body>
+  <script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById("year").textContent = currentYear;
+  </script>
 </html>

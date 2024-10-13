@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Музей Університету митної справи та фінансів</title>
+    <link rel="icon" type="image/x-icon" href="./images/caduceus.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -87,17 +88,17 @@
           <svg class="phone-burger" width="40" height="40">
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
-          <!-- <i class="fa fa-bars"></i> -->
         </a>
       </div>
     </header>
 
     <main>
       <!-- hero section -->
-      <section class="title-banner" id="banner">
+      <section class="title-banner history-page" id="banner">
         <div class="container">
           <div class="prettybox">
             <h1 class="header-title">ІСТОРІЯ МУЗЕЮ</h1>
+          </div>
         </div>
       </section>
       <!-- museum history section -->
@@ -255,11 +256,15 @@
         </div>
         <div class="license">
           <p class="ownership">
-            &#169; 2024 Університет митної справи та фінансів. Всі права
-            захищені
+            &#169; <span id="year"></span> Університет митної справи та
+            фінансів. Всі права захищені.
           </p>
         </div>
       </div>
     </footer>
   </body>
+  <script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById("year").textContent = currentYear;
+  </script>
 </html>
