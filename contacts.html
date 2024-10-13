@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Музей Університету митної справи та фінансів</title>
+    <link rel="icon" type="image/x-icon" href="./images/caduceus.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./old-styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <script src="./js/phone.js" defer></script>
     <header class="page-header" id="main">
       <div class="container header-container">
+        <!--desktop menu-->
         <nav class="top-nav">
           <a class="logo link" href="./index.html"
-            ><img class="logopic" src="./media/logo_4.png" alt="logo"
+            ><img class="logopic" src="./images/caduceus.png" alt="logo"
           /></a>
           <ul class="menu">
             <li class="menu-item dropdown">
@@ -34,21 +37,63 @@
               <a class="menu-link link" href="./gallery.html">Галерея</a>
             </li>
             <li class="menu-item">
+              <a class="menu-link link" href="./visitor.html">Відвідувачу</a>
+            </li>
+            <li class="menu-item">
               <a class="menu-link link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
       </div>
+      <!-- PHONE MENU -->
+      <div class="topnav">
+        <a class="active" href="./index.html"
+          ><img class="phone-logopic" src="./images/caduceus.png" alt="logo"
+        /></a>
+        <div id="myLinks" class="phone-menu">
+          <nav class="phone-drop">
+            <ul class="phone-list">
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./index.html">Головна</a>
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./history.html"
+                  >Історія створення музею</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./expositions.html"
+                  >Наші експозиції</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="./gallery.html"
+                  >Галерея</a
+                >
+              </li>
+              <li class="phone-menu-item">
+                <a class="phone-menu-link link" href="#">Відвідувачу</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <svg class="phone-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </a>
+      </div>
     </header>
 
     <main>
       <!-- hero section -->
-      <section class="title-banner" id="banner">
+      <section class="title-banner contacts-page" id="banner">
         <div class="container">
           <div class="prettybox"><h1 class="header-title">КОНТАКТИ</h1></div>
         </div>
       </section>
-      <section class="section find-special">
+      <!-- <section class="section find-special">
         <div class="container">
           <div class="find">
             <h2 class="section-name fat-text">Як нас знайти?</h2>
@@ -87,7 +132,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- contacts section -->
       <!-- <section class="section special">
         <div class="container">
@@ -147,17 +192,19 @@
         </div>
       </section> -->
       <section class="section map-special">
-        <div class="map">
-          <iframe
-            width="100%"
-            height="450"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=en&amp;q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0%20%D0%92%D0%B5%D1%80%D0%BD%D0%B0%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE,%202/4,%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE,%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0,%2049000+(%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%D0%A3%D0%9C%D0%A1%D0%A4)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            ><a href="https://www.gps.ie/">gps tracker sport</a></iframe
-          >
+        <div class="container">
+          <div class="map">
+            <iframe
+              width="100%"
+              height="450"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=en&amp;q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0%20%D0%92%D0%B5%D1%80%D0%BD%D0%B0%D0%B4%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE,%202/4,%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE,%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0,%2049000+(%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%D0%A3%D0%9C%D0%A1%D0%A4)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.gps.ie/">gps tracker sport</a></iframe
+            >
+          </div>
         </div>
       </section>
     </main>
@@ -173,17 +220,17 @@
               <ul class="contact-list">
                 <li class="contact-list-item">
                   <a class="link contact-look" href="tel:+380567560500"
-                    >(056) 756-05-00</a
+                    >+380 (056) 756-05-00</a
                   >
                 </li>
                 <li class="contact-list-item">
                   <a class="link contact-look" href="tel:+380665100135"
-                    >(066) 510-01-35</a
+                    >+380 (066) 510-01-35</a
                   >
                 </li>
                 <li class="contact-list-item">
                   <a class="link contact-look" href="tel:+38984510182"
-                    >(098) 451-01-82</a
+                    >+380 (098) 451-01-82</a
                   >
                 </li>
                 <li class="contact-list-item">
@@ -195,17 +242,20 @@
             </address>
           </div>
 
-          <div class="footer-contacts">
+          <div class="footer-times">
             <h3 class="footer-address-name">РЕЖИМ РОБОТИ</h3>
             <p class="footer-address-text open-times">
               вівторок – п’ятниця з 10:00 до 15:00
             </p>
+          </div>
+          <div class="footer-place">
             <h3 class="footer-address-name">АДРЕСА МУЗЕЮ</h3>
             <p class="footer-address-text">
               вулиця Володимира Вернадського, 2/4, Дніпро, Дніпропетровська
               область, Україна, 49000
             </p>
           </div>
+
           <div class="footer-media">
             <h3 class="footer-address-name">МЕДІА</h3>
             <ul class="footer-media-list">
@@ -228,11 +278,15 @@
         </div>
         <div class="license">
           <p class="ownership">
-            &#169; 2024 Університет митної справи та фінансів. Всі права
-            захищені
+            &#169; <span id="year"></span> Університет митної справи та
+            фінансів. Всі права захищені.
           </p>
         </div>
       </div>
     </footer>
   </body>
+  <script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById("year").textContent = currentYear;
+  </script>
 </html>
