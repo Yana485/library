@@ -252,6 +252,31 @@ img {
     margin-right: auto;
     margin-left: auto;
 }
+
+.visitor-title{
+    margin-bottom: 30px;
+}
+
+.visitor-text{
+    padding-bottom: 20px;
+}
+
+.no-bottom{
+    padding-bottom: 0;
+}
+
+h3.visitor-text{
+    padding-bottom: 0;
+}
+
+.find-title {
+    margin-bottom: 20px;
+}
+
+.find-text {
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 767px) {  /* mobile menu backdrop */
     .container {
         max-width: 550px;
