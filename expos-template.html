@@ -72,18 +72,30 @@
                 >
               </li>
               <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="#">Відвідувачу</a>
+                <a class="phone-menu-link link" href="./visitor.html"
+                  >Відвідувачу</a
+                >
               </li>
             </ul>
           </nav>
         </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <svg class="phone-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </a>
       </div>
     </header>
     <main>
       <!-- hero section -->
       <section class="title-banner expos-template-page" id="banner">
         <div class="container">
-          <div class="prettybox"><h1 class="header-title">******</h1></div>
+          <div class="prettybox">
+            <div class="prettybox">
+              <h1 class="header-title">Експозиції</h1>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -103,7 +115,7 @@
                       alt="aaaaaaaaaaaaaaaaaaaaaa"
                   /></a>
                   <div class="expos-temp-bottom-box">
-                    <p class="expos-bottom-text">
+                    <p id="dynamic-description" class="expos-bottom-text">
                       Історія митної справи, митних органів, фінансів та
                       торгівлі на території України з найдавніших часів – перша
                       зала музеюІсторія митної справи, митних органів, фінансів
@@ -128,7 +140,7 @@
                       alt="aaaaaaaaaaaaaaaaaaaaaa"
                   /></a>
                   <div class="expos-temp-bottom-box">
-                    <p class="expos-bottom-text">
+                    <p id="dynamic-description" class="expos-bottom-text">
                       Історія митної справи, митних органів, фінансів та
                       торгівлі на території України з найдавніших часів – перша
                       зала музеюІсторія митної справи, митних органів, фінансів
@@ -153,7 +165,7 @@
                       alt="aaaaaaaaaaaaaaaaaaaaaa"
                   /></a>
                   <div class="expos-temp-bottom-box">
-                    <p class="expos-bottom-text">
+                    <p id="dynamic-description" class="expos-bottom-text">
                       Історія митної справи, митних органів, фінансів та
                       торгівлі на території України з найдавніших часів – перша
                       зала музеюІсторія митної справи, митних органів, фінансів
@@ -178,7 +190,7 @@
                       alt="aaaaaaaaaaaaaaaaaaaaaa"
                   /></a>
                   <div class="expos-temp-bottom-box">
-                    <p class="expos-bottom-text">
+                    <p id="dynamic-description" class="expos-bottom-text">
                       Історія митної справи, митних органів, фінансів та
                       торгівлі на території України з найдавніших часів – перша
                       зала музеюІсторія митної справи, митних органів, фінансів
@@ -203,7 +215,7 @@
                       alt="aaaaaaaaaaaaaaaaaaaaaa"
                   /></a>
                   <div class="expos-temp-bottom-box">
-                    <p class="expos-bottom-text">
+                    <p id="dynamic-description" class="expos-bottom-text">
                       Історія митної справи, митних органів, фінансів та
                       торгівлі на території України з найдавніших часів – перша
                       зала музеюІсторія митної справи, митних органів, фінансів
@@ -228,13 +240,7 @@
                       alt="aaaaaaaaaaaaaaaaaaaaaa"
                   /></a>
                   <div class="expos-temp-bottom-box">
-                    <p class="expos-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
+                    <p id="dynamic-description" class="expos-bottom-text"></p>
                   </div>
                 </div>
               </div>
@@ -321,5 +327,18 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Отримуємо опис новини з localStorage
+      const newsDescription = localStorage.getItem("exposDescription");
+
+      // Якщо опис новини знайдений, вставляємо його у відповідний елемент
+      if (exposDescription) {
+        document.getElementById("dynamic-description").textContent =
+          exposDescription;
+      } else {
+        document.getElementById("dynamic-description").textContent =
+          "Опис новини не знайдено.";
+      }
+    </script>
   </body>
 </html>

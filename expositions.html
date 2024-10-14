@@ -370,5 +370,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Знаходимо всі новинні картки
+      const exposCards = document.querySelectorAll(".expos-list-item");
+
+      // Додаємо обробник подій для кожної новинної картки
+      exposCards.forEach((card) => {
+        card.addEventListener("click", function () {
+          // Отримуємо текст опису новини з натиснутої картки
+          const exposDescription =
+            card.querySelector(".expos-bottom-text").textContent;
+
+          // Зберігаємо опис новини в localStorage
+          localStorage.setItem("exposDescription", exposDescription);
+
+          // Переходимо на сторінку шаблону новини
+          window.location.href = "./expos-template.html";
+        });
+      });
+    </script>
   </body>
 </html>
