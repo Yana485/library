@@ -14,6 +14,7 @@
   <body>
     <script src="./js/main.js" defer></script>
     <script src="./js/phone.js" defer></script>
+    <script src="./js/modal.js" defer></script>
     <header class="page-header" id="main">
       <div class="container header-container">
         <!--desktop menu-->
@@ -117,9 +118,9 @@
                   </a>
                 </div>
                 <div class="news-bottom-box">
-                  <h3 class="news-name">Lorem ipsum 1</h3>
+                  <h3 class="news-name">Назва 1</h3>
                   <p class="news-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
               </div>
@@ -236,26 +237,26 @@
 
             <!-- Slides -->
             <div class="mySlides fade">
-              <a href="./images/slide_1.jpg" target="_blank">
-                <img class="slide-img" src="./images/slide_1.jpg" alt="" />
+              <a href="./images/25.png" target="_blank">
+                <img class="slide-img" src="./images/25.png" alt="" />
               </a>
             </div>
 
             <div class="mySlides fade">
-              <a href="./images/slide_2.jpg" target="_blank">
-                <img class="slide-img" src="./images/visitor.jpg" alt="" />
+              <a href="./images/27.png" target="_blank">
+                <img class="slide-img" src="./images/27.png" alt="" />
               </a>
             </div>
 
             <div class="mySlides fade">
-              <a href="./images/slide_3.jpg" target="_blank">
-                <img class="slide-img" src="./images/slide_3.jpg" alt="" />
+              <a href="./images/26.png" target="_blank">
+                <img class="slide-img" src="./images/26.png" alt="" />
               </a>
             </div>
 
             <!-- Navigation buttons -->
-            <a class="prev" onclick="plusSlides(-1)">Попередня світлина</a>
-            <a class="next" onclick="plusSlides(1)">Наступна світлина</a>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
 
           <!-- Caption -->
@@ -325,7 +326,9 @@
                   >
                 </li>
                 <li class="contact-list-item">
-                  <a class="link contact-look" href="umsf.connect@gmail.com"
+                  <a
+                    class="link contact-look"
+                    href="mailto:umsf.connect@gmail.com"
                     >umsf.connect@gmail.com</a
                   >
                 </li>
@@ -375,19 +378,24 @@
         </div>
       </div>
     </footer>
-  </body>
-  <script>
-    // Add event listeners to all news links
-    document.querySelectorAll(".news-new-link").forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        // Find the corresponding news name (h3)
-        var newsName = event.target
-          .closest(".news-box")
-          .querySelector(".news-name").innerText;
+    <script>
+      // Знаходимо всі новинні картки
+      const newsCards = document.querySelectorAll(".news-list-item");
 
-        // Store the news name in localStorage
-        localStorage.setItem("selectedNewsName", newsName);
+      // Додаємо обробник подій для кожної новинної картки
+      newsCards.forEach((card) => {
+        card.addEventListener("click", function () {
+          // Отримуємо текст опису новини з натиснутої картки
+          const newsDescription =
+            card.querySelector(".news-description").textContent;
+
+          // Зберігаємо опис новини в localStorage
+          localStorage.setItem("newsDescription", newsDescription);
+
+          // Переходимо на сторінку шаблону новини
+          window.location.href = "./news-template.html";
+        });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>

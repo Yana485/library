@@ -13,6 +13,7 @@
   </head>
   <body>
     <script src="./js/phone.js" defer></script>
+    <script src="./js/phone.js" defer></script>
     <header class="page-header" id="main">
       <div class="container header-container">
         <!--desktop menu-->
@@ -77,6 +78,13 @@
             </ul>
           </nav>
         </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <svg class="phone-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+          <!-- <i class="fa fa-bars"></i> -->
+        </a>
       </div>
     </header>
     <main>
@@ -88,18 +96,123 @@
         <div class="container">
           <div class="prettybox">
             <!-- Add ID to the h1 element -->
-            <h1 class="header-title news-title" id="news-title">НОВИНИ</h1>
+            <h1 id="news-title" class="header-title news-title">НОВИНИ</h1>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <p class="news-template-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            quo officia temporibus assumenda aliquid! In natus tempore
-            dignissimos cupiditate, quam reprehenderit? Esse iusto aut, est
-            molestiae repellendus eum eveniet voluptatum.
-          </p>
+          <p id="dynamic-description"></p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <ul class="news-template-list">
+            <li class="news-template-item">
+              <div class="news-temp-box">
+                <div class="news-top-box">
+                  <img
+                    id="myImg"
+                    class="news-temp-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  />
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01" />
+                    <div id="caption"></div>
+                  </div>
+                  <div class="news-temp-bottom-box">
+                    <p class="news-temp-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="news-template-item">
+              <div class="news-temp-box">
+                <div class="news-top-box">
+                  <img
+                    id="myImg"
+                    class="news-temp-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  />
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01" />
+                    <div id="caption"></div>
+                  </div>
+                  <div class="news-temp-bottom-box">
+                    <p class="news-temp-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="news-template-item">
+              <div class="news-temp-box">
+                <div class="news-top-box">
+                  <img
+                    id="myImg"
+                    class="news-temp-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  />
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01" />
+                    <div id="caption"></div>
+                  </div>
+                  <div class="news-temp-bottom-box">
+                    <p class="news-temp-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="news-template-item">
+              <div class="news-temp-box">
+                <div class="news-top-box">
+                  <img
+                    id="myImg"
+                    class="news-temp-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                  />
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01" />
+                    <div id="caption"></div>
+                  </div>
+                  <div class="news-temp-bottom-box">
+                    <p class="news-temp-bottom-text">
+                      Історія митної справи, митних органів, фінансів та
+                      торгівлі на території України з найдавніших часів – перша
+                      зала музеюІсторія митної справи, митних органів, фінансів
+                      та торгівлі на території України з найдавніших часів –
+                      перша зала музею
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -179,19 +292,17 @@
         </div>
       </div>
     </footer>
-
     <script>
-      const currentYear = new Date().getFullYear();
-      document.getElementById("year").textContent = currentYear;
+      // Отримуємо опис новини з localStorage
+      const newsDescription = localStorage.getItem("newsDescription");
 
-      // Get the stored news title from localStorage
-      var selectedNewsName = localStorage.getItem("selectedNewsName");
-
-      // If there is a selected news title, display it
-      if (selectedNewsName) {
-        document.getElementById("news-title").innerText = selectedNewsName;
+      // Якщо опис новини знайдений, вставляємо його у відповідний елемент
+      if (newsDescription) {
+        document.getElementById("dynamic-description").textContent =
+          newsDescription;
       } else {
-        document.getElementById("news-title").innerText = "Default News Title"; // Fallback if no title is found
+        document.getElementById("dynamic-description").textContent =
+          "Опис новини не знайдено.";
       }
     </script>
   </body>
