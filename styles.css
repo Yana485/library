@@ -126,14 +126,17 @@ img {
 }
 
 .header-title {
-    color: #cbcbcb;
-    max-width: 496px;
-    margin: auto;
-    padding-bottom: 15px;
+    color: #FFF;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 56px;
+    font-family: "Cormorant Infant", serif;
     font-weight: 700;
+    font-style: normal;
+    font-size: 74px;
     line-height: 1.07;
+    /* 107.143% */
     letter-spacing: 0.02em;
 }
 
@@ -145,13 +148,15 @@ img {
 .page-title {
     /*Заголовок на банері зверху*/
     color: #FFF;
-    max-width: 496px;
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 48px;
     text-align: center;
-    font-size: 56px;
+    font-family: "Cormorant Infant", serif;
     font-weight: 700;
+    font-style: normal;
+    font-size: 74px;
     line-height: 1.07;
     /* 107.143% */
     letter-spacing: 0.02em;
@@ -165,7 +170,9 @@ img {
     /* padding-bottom: 48px; */
     text-align: center;
     font-size: 20px;
-    font-weight: 300;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.07;
     /* 107.143% */
     letter-spacing: 0.02em;
@@ -179,13 +186,19 @@ img {
     padding-bottom: 50px;
     text-align: center;
     font-size: 32px;
+    font-family: "Cormorant Infant", serif;
     font-weight: 700;
+    font-style: normal;
     line-height: 1.07;
     letter-spacing: 0.02em;
 }
 
 .history-text {
     margin-bottom: 20px;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .fat-text {
@@ -255,10 +268,15 @@ img {
 
 .visitor-title{
     margin-bottom: 30px;
+    padding-bottom: 0;
 }
 
 .visitor-text{
     padding-bottom: 20px;
+    font-size: 20px;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .no-bottom{
@@ -271,10 +289,17 @@ h3.visitor-text{
 
 .find-title {
     margin-bottom: 20px;
+    font-size: 25px;
+    font-family: "Kurale", serif;
+    font-style: normal;
 }
 
 .find-text {
     margin-bottom: 20px;
+    font-size: 20px;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @media screen and (max-width: 767px) {  /* mobile menu backdrop */
@@ -321,8 +346,8 @@ h3.visitor-text{
     .topnav a.icon {
         display: block;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 30px;
+        top: 9px;
     }
 
     /* Add a grey background color on mouse-over */
@@ -343,7 +368,7 @@ h3.visitor-text{
     }
 
     .phone-logopic{
-        width: 60px;
+        width: 80px;
     }
 
     .phone-list{
@@ -460,6 +485,10 @@ h3.visitor-text{
         margin-right: auto;
         margin-left: auto;
         max-width: 600px;
+        font-family: "Cormorant Infant", serif;
+        font-weight: 700;
+        font-size: 25px;
+        font-style: normal;
     }
 
     .footer-address-text {
@@ -595,7 +624,9 @@ h3.visitor-text{
         margin-right: auto;
         text-align: center;
         font-size: 32px;
+        font-family: "Cormorant Infant", serif;
         font-weight: 700;
+        font-style: normal;
         line-height: 1.07;
         letter-spacing: 0.02em;
         margin-bottom: 20px;
@@ -603,6 +634,10 @@ h3.visitor-text{
 
     .expos-description {
         margin-bottom: 20px;
+        font-size: 20px;
+        font-family: "Kurale", serif;
+        font-weight: 400;
+        font-style: normal;
     }
 }
 
@@ -627,7 +662,7 @@ h3.visitor-text{
     }
 
     .logopic {
-        width: 70px;
+        width: 90px;
     }
 
     .topnav{
@@ -658,7 +693,7 @@ h3.visitor-text{
     .menu-link {
         color: #bcbcbc;
         display: block;
-        padding: 24px 0;
+        padding: 40px 0;
     }
 
     .menu-link:hover {
@@ -871,12 +906,19 @@ h3.visitor-text{
         color: #cbcbcb;
         margin-bottom: 10px;
         max-width: 350px;
+        font-family: "Cormorant Infant", serif;
+        font-weight: 700;
+        font-size: 20px;
+        font-style: normal;
     }
 
     .footer-address-text {
         width: 400px;
         color: #bcbcbc;
         margin-bottom: 10px;
+        font-family: "Kurale", serif;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .open-times {
@@ -944,6 +986,10 @@ h3.visitor-text{
 
     .contact-look {
         color: #bcbcbc;
+        font-family: "Kurale", serif;
+        font-weight: 400;
+        font-size: 15px;
+        font-style: normal;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -971,7 +1017,9 @@ h3.visitor-text{
         margin-right: auto;
         text-align: center;
         font-size: 32px;
+        font-family: "Cormorant Infant", serif;
         font-weight: 700;
+        font-style: normal;
         line-height: 1.07;
         letter-spacing: 0.02em;
         margin-bottom: 20px;
@@ -979,6 +1027,10 @@ h3.visitor-text{
 
     .expos-description {
         margin-bottom: 20px;
+        font-size: 20px;
+        font-family: "Kurale", serif;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .expos-list-item:hover {

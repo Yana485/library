@@ -4,7 +4,7 @@ var captions = ["Caption Text", "Caption Two", "Caption Three"];  // Array for c
 // Function for automatic slideshow
 function carousel() {
   showSlides(slideIndex += 1);  // Increment slide index
-  setTimeout(carousel, 2000);  // Change image every 2 seconds
+  setTimeout(carousel, 4000);  // Change image every 2 seconds
 }
 
 // Function to manually change slides (next/previous)
