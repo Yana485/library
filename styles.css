@@ -205,6 +205,19 @@ img {
     font-weight: 700;
 }
 
+.main-page-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.announcements{
+    max-width: 40%;
+}
+
+.news-container{
+max-width: 60%;
+}
+
 .net{
     padding-bottom: 10px;
 }
@@ -296,6 +309,13 @@ h3.visitor-text{
 
 .find-text {
     margin-bottom: 20px;
+    font-size: 20px;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.template-text{
     font-size: 20px;
     font-family: "Kurale", serif;
     font-weight: 400;
@@ -788,6 +808,61 @@ h3.visitor-text{
         width: 308px;
         color: #242424;
         /* height: 50px; */
+    }
+
+    .ann-list {
+        display: flex;
+        row-gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .ann-list-item {
+        max-height: 600px;
+        transition: transform .3s;
+        overflow: hidden;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ann-list-item:hover {
+        box-shadow: 0 2px 10px rgba(46, 47, 66, 0.08),
+            0 2px 2px rgba(46, 47, 66, 0.16),
+            0 3px 2px rgba(46, 47, 66, 0.08);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(0.9);
+    }
+
+     .ann-box {
+        position: relative;
+        max-width: 366px;
+    }
+
+    .ann-img {
+        object-fit: cover;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ann-top-box {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .ann-bottom-box {
+        max-height: 300px;
+        padding: 0 10px;
+    }
+
+    .ann-name {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .ann-description {
+        width: 308px;
+        color: #242424;
     }
 
         /* SLIDESHOW ==========================*/
