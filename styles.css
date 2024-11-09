@@ -450,6 +450,7 @@ h3.visitor-text{
             object-fit: cover;
             margin-right: auto;
             margin-left: auto;
+            max-height: 200px;
         }
     
         .news-top-box {
@@ -818,7 +819,7 @@ h3.visitor-text{
         object-fit: cover;
         margin-right: auto;
         margin-left: auto;
-        max-height: 300px;
+        /* max-height: 300px; */
     }
 
     .news-top-box {
