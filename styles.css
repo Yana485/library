@@ -874,6 +874,7 @@ h3.visitor-text{
         object-fit: cover;
         margin-right: auto;
         margin-left: auto;
+        max-height: 300px;
     }
 
     .ann-top-box {
