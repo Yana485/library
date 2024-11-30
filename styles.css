@@ -40,13 +40,7 @@ img {
     border-radius: 20px;
     border-color: #083a3b;
     padding: 10px 0;
-    /*варіант 1*/
-    /* background: #083a3be0; */
-        /* -webkit-box-shadow: 0 0 30px 20px #083a3b;
-        box-shadow: 0 0 30px 20px #083a3b; */
-/* варіант 2 */
-background-color: #083a3b;
-background: radial-gradient(circle, #083a3b 80%, rgba(255, 0, 0, 0) 100%);
+    background: radial-gradient(circle, #083a3b 80%, rgba(255, 0, 0, 0) 100%);
 }
 
 .title-desc-box {
@@ -56,12 +50,8 @@ background: radial-gradient(circle, #083a3b 80%, rgba(255, 0, 0, 0) 100%);
     margin-bottom: 48px;
     border-radius: 20px;
     padding: 10px 0;
-    /*варіант 1*/
         -webkit-box-shadow: 0 0 30px 20px #083a3b;
             box-shadow: 0 0 30px 20px #083a3b;
-        /* варіант 2 */
-        /* border-color: #083a3b; */
-    /* background: radial-gradient(circle, #083a3b 80%, rgba(255, 0, 0, 0) 100%); */
 }
 
 .visually-hidden {
@@ -207,14 +197,6 @@ background: radial-gradient(circle, #083a3b 80%, rgba(255, 0, 0, 0) 100%);
 .main-page-container {
     display: flex;
     flex-direction: row;
-}
-
-.announcements {
-    max-width: 40%;
-}
-
-.news-container {
-    max-width: 60%;
 }
 
 .net {
@@ -405,6 +387,29 @@ h3.visitor-text {
     font-style: normal;
 }
 
+.ann-name {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #242424;
+    font-size: 20px;
+}
+
+.ann-img {
+    object-fit: cover;
+    margin: 0 auto;
+    max-height: 250px;
+}
+
+.ann-list {
+    display: flex;
+    row-gap: 25px;
+    flex-wrap: wrap;
+}
+
+.ann-description {
+    color: #242424;
+}
+
 .page-title-description, .history-text, .visitor-text, .find-title, .find-text, .template-text, .expos-description, .news-description, .ann-description, .news-date, .footer-address-text, .contact-look {
     font-family: "Kurale", serif;
     font-weight: 400;
@@ -426,14 +431,34 @@ h3.visitor-text {
         display: none;/*hide desktop menu*/
     }
 
-    .slideshow-bit {
-        display: none;
+    .slide-img{
+        max-height: 350px;
+        margin: 0 auto;    
     }
 
     .topnav #myLinks {
         display: none;
-    }
-
+            /* Ховаємо за замовчуванням */
+            position: fixed;
+            /* Фіксуємо меню */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* На весь екран */
+            height: 100%;
+            background-color: rgba(8, 58, 59, 0.95);
+            /* Напівпрозорий темний фон */
+            z-index: 1000;
+            /* Поверх інших елементів */
+            flex-direction: column;
+            /* Стовпчик */
+            justify-content: center;
+            /* Центрування по вертикалі */
+            align-items: center;
+            /* Центрування по горизонталі */
+            gap: 20px;
+            /* Проміжки між елементами */
+        }
     .topnav {
         color: white;
         padding: 14px 16px;
@@ -556,6 +581,10 @@ h3.visitor-text {
         margin: 0 auto;
     }
 
+    .ann-description{
+        max-width: 350px;
+    }
+
     .contacts {
         font-style: normal;
         width: 200px;
@@ -620,6 +649,11 @@ h3.visitor-text {
     .menu-item:hover .dropdown-content {
         opacity: 1;
         visibility: visible;
+    }
+
+    .main-page-container{
+        flex-direction: column;
+        gap: 20px;
     }
 
     .expos-description-top {
@@ -764,21 +798,9 @@ h3.visitor-text {
         color: #242424;
     }
 
-    .ann-list {
-        display: flex;
-        row-gap: 25px;
-        flex-wrap: wrap;
-    }
-
     .ann-box {
         position: relative;
         max-width: 366px;
-    }
-
-    .ann-img {
-        object-fit: cover;
-        margin: 0 auto;
-        max-height: 250px;
     }
 
     .ann-top-box {
@@ -790,18 +812,6 @@ h3.visitor-text {
     .ann-bottom-box {
         max-height: 300px;
         padding: 0 10px;
-    }
-
-    .ann-name {
-        text-align: center;
-        margin-bottom: 8px;
-        color: #242424;
-        font-size: 20px;
-    }
-
-    .ann-description {
-        width: 308px;
-        color: #242424;
     }
 
     .news-date {
