@@ -9,8 +9,6 @@ function myFunction() {
   }
 }
 
-
-
      
 const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
@@ -37,4 +35,14 @@ if (selectedNewsName) {
   document.getElementById("news-title").innerText = selectedNewsName;
 } else {
   document.getElementById("news-title").innerText = "Default News Title"; // Fallback if no title is found
+}
+
+
+function toggleSubmenu(id) {
+  var submenu = document.getElementById(id);
+  if (submenu.style.display === "block") {
+    submenu.style.display = "none";
+  } else {
+    submenu.style.display = "block";
+  }
 }

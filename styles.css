@@ -82,7 +82,7 @@ img {
 
 .banner {
     padding: 188px 0;
-    background-image: url(https://picsum.photos/1440/600);
+    background-image: url(./images/banner-img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -416,6 +416,88 @@ h3.visitor-text {
     font-style: normal;
 }
 
+/* SLIDESHOW ==========================*/
+.slide-img {
+    max-width: 100%;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.numbertext-fixed {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 10;
+    font-weight: bold;
+}
+
+#caption-container {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mySlides {
+    display: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade {
+    opacity: 0;
+    animation: fadeEffect 1.5s forwards;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev {
+    top: 50%;
+    left: 3%;
+}
+
+.next {
+    top: 50%;
+    right: 1%;
+}
+
 @media screen and (max-width: 767px) {
     /* mobile menu backdrop */
     .container {
@@ -431,34 +513,25 @@ h3.visitor-text {
         display: none;/*hide desktop menu*/
     }
 
-    .slide-img{
-        max-height: 350px;
-        margin: 0 auto;    
+    .slide-img {
+        max-height: 250px;
     }
 
     .topnav #myLinks {
         display: none;
-            /* Ховаємо за замовчуванням */
-            position: fixed;
-            /* Фіксуємо меню */
-            top: 0;
-            left: 0;
-            width: 100%;
-            /* На весь екран */
-            height: 100%;
-            background-color: rgba(8, 58, 59, 0.95);
-            /* Напівпрозорий темний фон */
-            z-index: 1000;
-            /* Поверх інших елементів */
-            flex-direction: column;
-            /* Стовпчик */
-            justify-content: center;
-            /* Центрування по вертикалі */
-            align-items: center;
-            /* Центрування по горизонталі */
-            gap: 20px;
-            /* Проміжки між елементами */
-        }
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #083a3bf5;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+        
     .topnav {
         color: white;
         padding: 14px 16px;
@@ -470,11 +543,17 @@ h3.visitor-text {
         position: relative;
     }
 
-    .topnav a.icon {
+    .topnav a.icon{
         display: block;
         position: absolute;
         right: 30px;
         top: 9px;
+    }
+
+    .phone-drop-box{
+        height: 100%;
+        padding-top: 72px;
+        padding-bottom: 40px;
     }
 
     .active {
@@ -488,15 +567,26 @@ h3.visitor-text {
         margin: 18px 18px;
     }
 
+    .icon-close {
+        fill: #cbcbcb;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin: 18px 18px;
+        display: block;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+    }
+    
     .phone-logopic {
         width: 80px;
     }
 
     .phone-list {
         display: flex;
+        margin: auto 30px;
         flex-direction: column;
-        align-items: center;
-        column-gap: 40px;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .phone-menu-link {
@@ -504,14 +594,107 @@ h3.visitor-text {
         color: #cbcbcb;
     }
     /* ===========Banner============== */
+    .banner{
+        height: 100%;
+        padding: 100px 0;
+        background-position: center;
+        width: 100%;
+    }
+
     .page-title {
-        max-width: 200px;
+        max-width: 276px;
+        font-size: 40px;
+    }
+
+    .main-page-banner{
+        margin: auto;
     }
 
     .page-title-description {
-        max-width: 400px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 200;
+        max-width: 350px;
+    }
+
+    .title-desc-box {
+        min-width: 100px;
+    }
+
+    .title-box {
+        min-width: 400px;
+    }
+
+    /* Підсписок (спочатку прихований) */
+    .submenu {
+        display: none;
+        /* Ховаємо за замовчуванням */
+        list-style-type: none;
+        /* Прибираємо маркери списку */
+        padding-left: 20px;
+        /* Відступ для вкладеного списку */
+        margin-top: 10px;
+    }
+
+    .submenu li {
+        margin: 5px 0;
+    }
+
+    .submenu a {
+        font-size: 30px;
+        color: #cbcbcb;
+        text-decoration: none;
+    }
+
+    .submenu a:hover {
+        color: #e9c873;
+        /* Ефект при наведенні */
+    }
+    
+    /* Вкладений підсписок (за замовчуванням прихований) */
+    .nested-submenu {
+        display: none;
+        /* Ховаємо за замовчуванням */
+        list-style-type: none;
+        padding-left: 20px;
+        /* Відступ для вкладеного списку */
+        margin-top: 5px;
+    }
+
+    .nested-submenu li {
+        margin: 5px 0;
+    }
+
+    .nested-submenu a {
+        font-size: 25px;
+        /* Зменшений розмір тексту */
+        color: #cbcbcb;
+        text-decoration: none;
+    }
+
+    .nested-submenu a:hover {
+        color: #e9c873;
+        /* Ефект при наведенні */
+    }
+    
+    /* Базове меню */
+    .phone-menu .submenu {
+        display: none;
+        /* Ховаємо підменю за замовчуванням */
+        list-style-type: none;
+        padding-left: 20px;
+        /* Відступ для вкладень */
+        margin: 10px 0;
+    }
+
+    .phone-menu .submenu a {
+        font-size: 18px;
+        color: #cbcbcb;
+        text-decoration: none;
+    }
+
+    .phone-menu .submenu a:hover {
+        color: #e9c873;
+        /* Колір при наведенні */
     }
 
     .news-box {
@@ -816,85 +999,6 @@ h3.visitor-text {
 
     .news-date {
         color: #242424;
-    }
-    /* SLIDESHOW ==========================*/
-    .slideshow-container {
-        position: relative;
-        margin: auto;
-        overflow: hidden;
-        max-width: 800px;
-    }
-
-    .numbertext-fixed {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        z-index: 10;
-        font-weight: bold;
-    }
-
-    .slide-img {
-        display: block;
-        margin: 0 auto;
-        max-width: 800px;
-        max-height: 450px;
-        object-fit: contain;
-    }
-
-    #caption-container {
-        text-align: center;
-        color: #333;
-        font-size: 18px;
-        margin-top: 10px;
-    }
-
-    .mySlides {
-        display: none;
-        transition: opacity 1s ease-in-out;
-    }
-
-    .fade {
-        opacity: 0;
-        animation: fadeEffect 1.5s forwards;
-    }
-
-    @keyframes fadeEffect {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    .prev,
-    .next {
-        cursor: pointer;
-        position: absolute;
-        transform: translateX(-50%);
-        padding: 16px;
-        color: white;
-        font-weight: 700;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 50%;
-        user-select: none;
-    }
-
-    .prev {
-        top: 50%;
-        left: 3%;
-    }
-
-    .next {
-        top: 50%;
-        right: 1%;
     }
 
     /* FOOTER */

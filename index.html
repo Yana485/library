@@ -99,49 +99,124 @@
       </div>
       <!-- PHONE MENU -->
       <div class="topnav">
-        <a class="active" href="./index.html"
-          ><img class="phone-logopic" src="./images/caduceus.png" alt="logo"
-        /></a>
+        <a class="active" href="./index.html">
+          <img class="phone-logopic" src="./images/caduceus.png" alt="logo" />
+        </a>
         <div id="myLinks" class="phone-menu">
-          <a href="" class="icon-close"
-            ><svg class="icon-close" width="40" height="40">
+          <a href="" class="icon-close">
+            <svg class="icon-close" width="30" height="30">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </a>
-          <nav class="phone-drop">
-            <ul class="phone-list">
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./index.html">Головна</a>
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./history.html"
-                  >Історія створення музею</a
-                >
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./expositions.html"
-                  >Наші експозиції</a
-                >
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./gallery.html"
-                  >Галерея</a
-                >
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./visitor.html"
-                  >Відвідувачу</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <div class="phone-drop-box">
+            <nav class="phone-drop">
+              <ul class="phone-list">
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./index.html"
+                    >Головна</a
+                  >
+                </li>
+                <li class="phone-menu-item">
+                  <a
+                    class="phone-menu-link link"
+                    href="javascript:void(0);"
+                    onclick="toggleSubmenu('structure')"
+                    >Структура музею</a
+                  >
+                  <ul class="submenu" id="structure">
+                    <li>
+                      <a href="#">Історія створення музею</a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="toggleSubmenu('customs-trade-history')"
+                        >Історія торгівлі та митної справи</a
+                      >
+                      <ul class="submenu" id="customs-trade-history">
+                        <li>
+                          <a href="#"
+                            >ТЗМК (технічні засоби митного контролю)</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#">Історія митної справи до 1991 року</a>
+                        </li>
+                        <li>
+                          <a href="#">Історія боротьби з контрабандою</a>
+                        </li>
+                        <li>
+                          <a href="#">Сучасна історія митної справи</a>
+                        </li>
+                        <li>
+                          <a href="#">Митна уніформа</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="toggleSubmenu('financial-history')"
+                        >Історія фінансового обігу</a
+                      >
+                      <ul class="submenu" id="financial-history">
+                        <li>
+                          <a href="#">Банкноти світу</a>
+                        </li>
+                        <li><a href="#">Монети світу</a></li>
+                        <li>
+                          <a href="#">Україна. Валюти</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="toggleSubmenu('art-history')"
+                        >Художня творчість</a
+                      >
+                      <ul class="submenu" id="art-history">
+                        <li><a href="#">Петриківка</a></li>
+                        <li>
+                          <a href="#">Галерея мистецтв</a>
+                        </li>
+                        <li>
+                          <a href="#">Виставка фотомайстрів</a>
+                        </li>
+                        <li>
+                          <a href="#">Виставка майстрів НСХУ</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Історія університету</a>
+                    </li>
+                  </ul>
+                </li>
 
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./gallery.html"
+                    >Галерея</a
+                  >
+                </li>
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./visitor.html"
+                    >Відвідувачу</a
+                  >
+                </li>
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./contacts.html"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <svg class="phone-burger" width="40" height="40">
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
-          <!-- <i class="fa fa-bars"></i> -->
         </a>
       </div>
     </header>
@@ -210,7 +285,6 @@
               </li>
             </ul>
           </div>
-
           <div class="news-container">
             <h2 class="section-name">Останні новини з життя музею</h2>
             <ul class="news-list">
@@ -333,7 +407,6 @@
         </div>
       </section>
 
-      <!--slideshow section -->
       <!-- Slideshow Section -->
       <section class="section slideshow-bit" id="slideshow">
         <div class="container">
