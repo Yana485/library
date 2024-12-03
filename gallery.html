@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Музей університету митної справи та фінансів"
+    />
+    <meta
+      name="keywords"
+      content="Дніпро, УМСФ, Університет Митної справи та фінансів, Музей, Музей УМСФ,Museum, Dnipro"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Музей Університету митної справи та фінансів</title>
     <link rel="icon" type="image/x-icon" href="./images/caduceus.png" />
@@ -98,44 +106,124 @@
       </div>
       <!-- PHONE MENU -->
       <div class="topnav">
-        <a class="active" href="./index.html"
-          ><img class="phone-logopic" src="./images/caduceus.png" alt="logo"
-        /></a>
+        <a class="active" href="./index.html">
+          <img class="phone-logopic" src="./images/caduceus.png" alt="logo" />
+        </a>
         <div id="myLinks" class="phone-menu">
-          <nav class="phone-drop">
-            <ul class="phone-list">
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./index.html">Головна</a>
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./history.html"
-                  >Історія створення музею</a
-                >
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./expositions.html"
-                  >Наші експозиції</a
-                >
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./gallery.html"
-                  >Галерея</a
-                >
-              </li>
-              <li class="phone-menu-item">
-                <a class="phone-menu-link link" href="./visitor.html"
-                  >Відвідувачу</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <a href="" class="icon-close">
+            <svg class="icon-close" width="30" height="30">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </a>
+          <div class="phone-drop-box">
+            <nav class="phone-drop">
+              <ul class="phone-list">
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./index.html"
+                    >Головна</a
+                  >
+                </li>
+                <li class="phone-menu-item">
+                  <a
+                    class="phone-menu-link link"
+                    href="javascript:void(0);"
+                    onclick="toggleSubmenu('structure')"
+                    >Структура музею</a
+                  >
+                  <ul class="submenu" id="structure">
+                    <li>
+                      <a href="#">Історія створення музею</a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="toggleSubmenu('customs-trade-history')"
+                        >Історія торгівлі та митної справи</a
+                      >
+                      <ul class="submenu" id="customs-trade-history">
+                        <li>
+                          <a href="#"
+                            >ТЗМК (технічні засоби митного контролю)</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#">Історія митної справи до 1991 року</a>
+                        </li>
+                        <li>
+                          <a href="#">Історія боротьби з контрабандою</a>
+                        </li>
+                        <li>
+                          <a href="#">Сучасна історія митної справи</a>
+                        </li>
+                        <li>
+                          <a href="#">Митна уніформа</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="toggleSubmenu('financial-history')"
+                        >Історія фінансового обігу</a
+                      >
+                      <ul class="submenu" id="financial-history">
+                        <li>
+                          <a href="#">Банкноти світу</a>
+                        </li>
+                        <li><a href="#">Монети світу</a></li>
+                        <li>
+                          <a href="#">Україна. Валюти</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        onclick="toggleSubmenu('art-history')"
+                        >Художня творчість</a
+                      >
+                      <ul class="submenu" id="art-history">
+                        <li><a href="#">Петриківка</a></li>
+                        <li>
+                          <a href="#">Галерея мистецтв</a>
+                        </li>
+                        <li>
+                          <a href="#">Виставка фотомайстрів</a>
+                        </li>
+                        <li>
+                          <a href="#">Виставка майстрів НСХУ</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Історія університету</a>
+                    </li>
+                  </ul>
+                </li>
 
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./gallery.html"
+                    >Галерея</a
+                  >
+                </li>
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./visitor.html"
+                    >Відвідувачу</a
+                  >
+                </li>
+                <li class="phone-menu-item">
+                  <a class="phone-menu-link link" href="./contacts.html"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <svg class="phone-burger" width="40" height="40">
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
-          <!-- <i class="fa fa-bars"></i> -->
         </a>
       </div>
     </header>
@@ -150,31 +238,15 @@
       <section class="section net" id="expositions">
         <div class="container">
           <h2 class="visually-hidden">Наші експозиції</h2>
-
           <ul class="gallery-list">
             <li class="gallery-list-item">
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
+                    class="expos-img fullscreen-img"
                     src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    alt="Sample caption 1"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -182,25 +254,10 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
-                    src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -208,25 +265,22 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
-                    src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="Sample caption 1"
+                  />
                 </div>
               </div>
             </li>
@@ -234,25 +288,10 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
-                    src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -260,25 +299,10 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
-                    src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -286,25 +310,10 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
+                    class="expos-img fullscreen-img"
                     src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    alt="Sample caption 1"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -312,25 +321,10 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
-                    src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -338,25 +332,10 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
-                    src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
                 </div>
               </div>
             </li>
@@ -364,25 +343,131 @@
               <div class="gallery-box">
                 <div class="expos-top-box">
                   <img
-                    id="myImg"
-                    class="expos-img"
+                    class="expos-img fullscreen-img"
                     src="https://picsum.photos/500/300?random=1"
-                    alt="aaaaaaaaaaaaaaaaaaaaaa"
+                    alt="Sample caption 1"
                   />
-                  <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01" />
-                    <div id="caption"></div>
-                  </div>
-                  <div class="gallery-bottom-box">
-                    <p class="gallery-bottom-text">
-                      Історія митної справи, митних органів, фінансів та
-                      торгівлі на території України з найдавніших часів – перша
-                      зала музеюІсторія митної справи, митних органів, фінансів
-                      та торгівлі на території України з найдавніших часів –
-                      перша зала музею
-                    </p>
-                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="Sample caption 1"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="Sample caption 1"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=1"
+                    alt="Sample caption 1"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=2"
+                    alt="Sample caption 2"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="gallery-list-item">
+              <div class="gallery-box">
+                <div class="expos-top-box">
+                  <img
+                    class="expos-img fullscreen-img"
+                    src="https://picsum.photos/500/300?random=3"
+                    alt="Sample caption 3"
+                  />
                 </div>
               </div>
             </li>

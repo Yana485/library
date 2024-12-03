@@ -498,6 +498,66 @@ h3.visitor-text {
     right: 1%;
 }
 
+/* Fullscreen modal */
+.modal {
+    display: flex;
+    /* Flex for centering */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Semi-transparent black background */
+    z-index: 1000;
+    /* Above all content */
+    overflow: hidden;
+    /* Prevent scrolling */
+}
+
+/* Modal image */
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    /* Allow space for the caption */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Caption below the image */
+.caption {
+    margin-top: 15px;
+    /* Space between image and caption */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    max-width: 90%;
+    word-wrap: break-word;
+    /* Ensure long captions wrap to the next line */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
 @media screen and (max-width: 767px) {
     /* mobile menu backdrop */
     .container {
@@ -854,6 +914,10 @@ h3.visitor-text {
         margin-bottom: 20px;
         font-size: 20px;
     }
+
+    .modal-content {
+        width: 100%;
+    }
 }
 /* ================LAPTOP======================== */
 @media screen and (min-width:768px) {
@@ -1111,88 +1175,5 @@ h3.visitor-text {
         max-width: 360px;
     }
 
-    /* MODAL IMAGES */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-    }
-
-    /* Caption of Modal Image */
-    #caption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-    }
-
-    .modal-content,
-    #caption {
-        -webkit-animation-name: zoom;
-        -webkit-animation-duration: 0.6s;
-        animation-name: zoom;
-        animation-duration: 0.6s;
-    }
-
-    @-webkit-keyframes zoom {
-        from {
-            -webkit-transform: scale(0)
-        }
-
-        to {
-            -webkit-transform: scale(1)
-        }
-    }
-
-    @keyframes zoom {
-        from {
-            transform: scale(0)
-        }
-
-        to {
-            transform: scale(1)
-        }
-    }
-
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    @media only screen and (max-width: 700px) {
-        .modal-content {
-            width: 100%;
-        }
-    }
+    
 }
