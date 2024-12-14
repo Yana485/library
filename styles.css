@@ -419,19 +419,12 @@ h3.visitor-text {
 /* SLIDESHOW ==========================*/
 .slide-img {
     max-width: 100%;
-    /* Image will never exceed container width */
     max-height: 350px;
-    /* Restricts image height */
     width: auto;
-    /* Maintains aspect ratio */
     height: auto;
-    /* Maintains aspect ratio */
     display: block;
-    /* Centers the image */
     margin: 0 auto;
-    /* Center horizontally */
     object-fit: contain;
-    /* Ensures the image fits without cropping */
 }
 
 .slideshow-container {
@@ -446,7 +439,7 @@ h3.visitor-text {
 .numbertext-fixed {
     position: absolute;
     top: 10px;
-    left: 15%;
+    left: 20%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
@@ -458,12 +451,10 @@ h3.visitor-text {
 
 .slideshow-description {
     margin: 20px auto 0 auto;
-    /* Centers the description */
     text-align: center;
     font-size: 16px;
     color: #333;
     max-width: 90%;
-    /* Optional: limits width for smaller screens */
 }
 
 #caption-container {
@@ -520,30 +511,23 @@ h3.visitor-text {
 /* Fullscreen modal */
 .modal {
     display: flex;
-    /* Flex for centering */
     flex-direction: column;
-    /* Stack items vertically */
     justify-content: center;
     align-items: center;
     position: fixed;
-    /* Fixed to the viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    /* Semi-transparent black background */
     z-index: 1000;
-    /* Above all content */
     overflow: hidden;
-    /* Prevent scrolling */
 }
 
 /* Modal image */
 .modal-content {
     max-width: 90%;
     max-height: 80%;
-    /* Allow space for the caption */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -551,13 +535,11 @@ h3.visitor-text {
 /* Caption below the image */
 .caption {
     margin-top: 15px;
-    /* Space between image and caption */
     color: white;
     text-align: center;
     font-size: 18px;
     max-width: 90%;
     word-wrap: break-word;
-    /* Ensure long captions wrap to the next line */
 }
 
 /* Close button */
@@ -590,7 +572,7 @@ h3.visitor-text {
 
     /* Style the navigation menu */
     .top-nav {
-        display: none;/*hide desktop menu*/
+        display: none;
     }
 
     .slide-img {
@@ -673,11 +655,20 @@ h3.visitor-text {
         font-size: 40px;
         color: #cbcbcb;
     }
+
+    .numbertext-fixed{
+        left:10%;
+    }
+
+    .header-title {
+        font-size: 35px;
+    }
     /* ===========Banner============== */
     .banner{
         height: 100%;
         padding: 50px 0;
-        min-height: 10px;
+        /* min-height: 10px; */
+        min-height: 250px;
     }
 
     .page-title {
@@ -690,13 +681,14 @@ h3.visitor-text {
     }
 
     .page-title-description {
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 200;
         max-width: 350px;
     }
 
     .title-desc-box {
         min-width: 100px;
+        max-width: 250px;
         box-shadow:0 0 20px 5px #083a3b;
     }
 
@@ -704,14 +696,10 @@ h3.visitor-text {
         min-width: 300px;
     }
 
-    /* Підсписок (спочатку прихований) */
     .submenu {
         display: none;
-        /* Ховаємо за замовчуванням */
         list-style-type: none;
-        /* Прибираємо маркери списку */
         padding-left: 20px;
-        /* Відступ для вкладеного списку */
         margin-top: 10px;
     }
 
@@ -727,42 +715,34 @@ h3.visitor-text {
 
     .submenu a:hover {
         color: #e9c873;
-        /* Ефект при наведенні */
     }
     
     /* Вкладений підсписок (за замовчуванням прихований) */
     .nested-submenu {
-        display: none;
-        /* Ховаємо за замовчуванням */
-        list-style-type: none;
-        padding-left: 20px;
-        /* Відступ для вкладеного списку */
-        margin-top: 5px;
+    display: none; /* Ховаємо за замовчуванням */
+    list-style-type: none;
+    padding-left: 20px; /* Відступ для вкладеного списку */
+    margin-top: 5px;
     }
 
     .nested-submenu li {
-        margin: 5px 0;
+    margin: 5px 0;
     }
 
     .nested-submenu a {
-        font-size: 25px;
-        /* Зменшений розмір тексту */
-        color: #cbcbcb;
-        text-decoration: none;
+    font-size: 25px; /* Зменшений розмір тексту */
+    color: #cbcbcb;
+    text-decoration: none;
     }
 
     .nested-submenu a:hover {
-        color: #e9c873;
-        /* Ефект при наведенні */
-    }
+    color: #e9c873; /* Ефект при наведенні */
+    }                                                    
     
-    /* Базове меню */
     .phone-menu .submenu {
         display: none;
-        /* Ховаємо підменю за замовчуванням */
         list-style-type: none;
         padding-left: 20px;
-        /* Відступ для вкладень */
         margin: 10px 0;
     }
 
@@ -774,7 +754,15 @@ h3.visitor-text {
 
     .phone-menu .submenu a:hover {
         color: #e9c873;
-        /* Колір при наведенні */
+    }
+
+    .title-banner {
+        min-height: 250px;
+        padding: 50px 0;
+    }
+
+    .prettybox {
+        padding: 0;
     }
 
     .news-box {
@@ -947,7 +935,6 @@ h3.visitor-text {
         padding-left: 15px;
         padding-right: 15px;
         justify-content: space-between;
-        overflow: hidden;
     }
 
     .logo {
@@ -1011,7 +998,7 @@ h3.visitor-text {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        width: 300px;
+        width: 250px;
     }
 
     .dropdown-content a:hover {
