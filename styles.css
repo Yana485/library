@@ -131,7 +131,7 @@ img {
     max-width: 520px;
     margin: 0 auto;
     text-align: center;
-    font-size: 74px;
+    font-size: 54px;
     line-height: 1.07;
     letter-spacing: 0.02em;
 }
@@ -419,12 +419,19 @@ h3.visitor-text {
 /* SLIDESHOW ==========================*/
 .slide-img {
     max-width: 100%;
+    /* Image will never exceed container width */
     max-height: 350px;
+    /* Restricts image height */
     width: auto;
+    /* Maintains aspect ratio */
     height: auto;
+    /* Maintains aspect ratio */
     display: block;
+    /* Centers the image */
     margin: 0 auto;
+    /* Center horizontally */
     object-fit: contain;
+    /* Ensures the image fits without cropping */
 }
 
 .slideshow-container {
@@ -432,19 +439,31 @@ h3.visitor-text {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .numbertext-fixed {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     z-index: 10;
     font-weight: bold;
+}
+
+.slideshow-description {
+    margin: 20px auto 0 auto;
+    /* Centers the description */
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    max-width: 90%;
+    /* Optional: limits width for smaller screens */
 }
 
 #caption-container {
@@ -566,6 +585,7 @@ h3.visitor-text {
         padding-left: 10px;
         padding-right: 10px;
         justify-content: space-between;
+        overflow: hidden;
     }
 
     /* Style the navigation menu */
@@ -678,10 +698,11 @@ h3.visitor-text {
 
     .title-desc-box {
         min-width: 100px;
+        box-shadow:0 0 20px 5px #083a3b;
     }
 
     .title-box {
-        min-width: 400px;
+        min-width: 300px;
     }
 
     /* Підсписок (спочатку прихований) */
@@ -927,6 +948,7 @@ h3.visitor-text {
         padding-left: 15px;
         padding-right: 15px;
         justify-content: space-between;
+        overflow: hidden;
     }
 
     .logo {
