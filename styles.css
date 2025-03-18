@@ -490,73 +490,75 @@ h3.visitor-text {
     position: absolute;
     transform: translateX(-50%);
     padding: 16px;
-    color: white;
+    color: rgb(5, 4, 4);
     font-weight: 700;
-    font-size: 18px;
+    font-size: 45px;
     transition: 0.6s ease;
     border-radius: 50%;
     user-select: none;
 }
 
 .prev {
-    top: 50%;
-    left: 3%;
+    top: 35%;
+    left: 5%;
 }
 
 .next {
-    top: 50%;
-    right: 1%;
+    top: 35%;
+    right: 0%;
 }
 
-/* Fullscreen modal */
+.news-temp-img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.news-temp-img:hover {
+    transform: scale(1.05);
+    /* Легке збільшення картинки при наведенні */
+}
+
 .modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    overflow: hidden;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal image */
 .modal-content {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 10% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
 }
 
-/* Caption below the image */
 .caption {
-    margin-top: 15px;
-    color: white;
     text-align: center;
-    font-size: 18px;
-    max-width: 90%;
-    word-wrap: break-word;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-/* Close button */
 .close {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 25px;
     color: white;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
     cursor: pointer;
-    user-select: none;
-    transition: color 0.3s ease;
 }
 
-.close:hover {
-    color: #bbb;
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
